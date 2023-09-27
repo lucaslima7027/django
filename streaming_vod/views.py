@@ -13,3 +13,6 @@ def index1(request):
     return render(request, "streaming_vod/tasks.html", {
         "tasks": tasks
         })
+
+def add(request):
+    return render(request, "streaming_vod/add.html")
