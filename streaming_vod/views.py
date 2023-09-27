@@ -6,4 +6,4 @@ def index(Request):
     return render(Request, "streaming_vod/index.html")
 
 def greet(Request, name):
-    return render(Request, "streaming_vod/greet.html", {"name": name.capitalize()})
+    return render(Request, "streaming_vod/greet.html", {"name":name.capitalize()})
