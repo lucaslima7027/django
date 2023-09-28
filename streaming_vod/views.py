@@ -14,11 +14,6 @@ def greet(request, name):
 
 tasks = []
 def index1(request):
-    return render(request, "streaming_vod/tasks.html", {
-        "tasks": tasks
-        })
-
-def add(request):
     if request.method == "POST":
         form = newTaskForm(request.POST)
         if form.is_valid():
@@ -28,7 +23,7 @@ def add(request):
             return render(request, "streaming_vod/add.htm", {
                 "form": form
             })
-
-    return render(request, "streaming_vod/add.html", {
+    return render(request, "streaming_vod/tasks.html", {
+        "tasks": tasks,
         "form": newTaskForm()
-    })
+        })
